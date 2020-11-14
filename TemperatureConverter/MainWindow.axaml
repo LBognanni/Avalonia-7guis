@@ -8,9 +8,9 @@
         Title="TemperatureConverter">
 
   <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="3">
-    <TextBox Width="50" Text="{Binding Celsius}"></TextBox>
+    <TextBox Width="80" Text="{Binding Celsius}"></TextBox>
     <TextBlock>Celsius = </TextBlock>
-    <TextBox Width="50" Text="{Binding Farenheit}"></TextBox>
+    <TextBox Width="80" Text="{Binding Farenheit}"></TextBox>
     <TextBlock>Farenheit</TextBlock>
   </StackPanel>
   
