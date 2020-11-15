@@ -9,9 +9,6 @@ namespace CRUD
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
             this.DataContext = new CrudViewModel();
         }
 
