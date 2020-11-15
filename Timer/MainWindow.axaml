@@ -1,0 +1,35 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width="300"
+        Height="150"
+        x:Class="Timer.MainWindow"
+        Padding="10"
+        Title="Timer">
+  <StackPanel Orientation="Vertical" Spacing="10">
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock>Elapsed time:</TextBlock> 
+      <ProgressBar Minimum="0" Maximum="{Binding Duration}" Value="{Binding Elapsed}"></ProgressBar>
+    </StackPanel>
+    
+    <TextBlock Text="{Binding Elapsed}, StringFormat={0:0.00s}" ></TextBlock>
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock>Duration:</TextBlock>
+      
+      <Slider 
+        Minimum="1" 
+        Maximum="100" 
+        Value="{Binding Duration}" 
+        Width="200"
+        TickFrequency="1" 
+              ></Slider>
+    </StackPanel>
+
+    <Button Command="{Binding Reset}">Reset</Button>
+    
+  </StackPanel>
+</Window>

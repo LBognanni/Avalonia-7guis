@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter", "Tem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightBooker", "FlightBooker\FlightBooker.csproj", "{6C0CA274-AA00-4375-86E7-3D54205BE818}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{00618AB2-0794-45C6-8D5B-6A69D0D414A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6C0CA274-AA00-4375-86E7-3D54205BE818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C0CA274-AA00-4375-86E7-3D54205BE818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C0CA274-AA00-4375-86E7-3D54205BE818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00618AB2-0794-45C6-8D5B-6A69D0D414A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00618AB2-0794-45C6-8D5B-6A69D0D414A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00618AB2-0794-45C6-8D5B-6A69D0D414A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00618AB2-0794-45C6-8D5B-6A69D0D414A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
