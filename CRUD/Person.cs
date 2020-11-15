@@ -64,6 +64,11 @@ namespace CRUD
             return other.Name == this.Name && other.Surname == this.Surname;
         }
 
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_name, _surname);
+        }
+
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
