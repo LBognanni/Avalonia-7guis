@@ -1,0 +1,65 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width="350"
+        Height="200"
+        x:Class="CRUD.MainWindow"
+        Padding="6"
+        Title="CRUD"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="75"></ColumnDefinition>
+        <ColumnDefinition Width="75"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+      </Grid.RowDefinitions>
+
+      <TextBlock Margin="4" Grid.Row="0" Grid.Column="0">Filter prefix:</TextBlock>
+      
+      <TextBox Margin="4" Grid.Row="0" Grid.Column="1" Text="{Binding Filter}"></TextBox>
+
+      <ListBox 
+        Margin="4" 
+        Grid.Row="1" 
+        Grid.Column="0" 
+        Grid.ColumnSpan="2" 
+        Grid.RowSpan="3"
+        Items="{Binding People}"
+        SelectionMode="Single"
+        SelectedItem="{Binding SelectedPerson}"
+        >
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding FullName}"></TextBlock>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
+
+
+      <TextBlock Margin="4" Grid.Row="1" Grid.Column="2" >Name:</TextBlock>
+      <TextBox Text="{Binding EditingPerson.Name}" Margin="4" Grid.Row="1" Grid.Column="3" ></TextBox>
+
+      <TextBlock Margin="4" Grid.Row="2" Grid.Column="2" >Surname:</TextBlock>
+      <TextBox Text="{Binding EditingPerson.Surname}" Margin="4" Grid.Row="2" Grid.Column="3" ></TextBox>
+
+
+      <StackPanel Margin="4" Grid.Row="4" Grid.ColumnSpan="4" Orientation="Horizontal" Spacing="4" VerticalAlignment="Bottom">
+        <Button IsEnabled="{Binding CanCreate}" Command="{Binding Create}" >Create</Button>
+        <Button IsEnabled="{Binding CanUpdate}" Command="{Binding Update}">Update</Button>
+        <Button IsEnabled="{Binding CanDelete}" Command="{Binding Delete}">Delete</Button>
+      </StackPanel>
+
+    </Grid>
+
+  </Window>
