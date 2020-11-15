@@ -17,9 +17,9 @@
       </ComboBox.ItemTemplate>
     </ComboBox>
     
-    <DatePicker SelectedDate="{Binding Date1, Mode=TwoWay}"></DatePicker>
+    <TextBox Text="{Binding Date1}"></TextBox>
 
-    <DatePicker IsEnabled="{Binding Date2Enabled}" SelectedDate="{Binding Date2, Mode=TwoWay}"></DatePicker>
+    <TextBox IsEnabled="{Binding Date2Enabled}" Text="{Binding Date2}"></TextBox>
     
     <Button IsEnabled="{Binding CanBook}" Command="{Binding Book}">Book</Button>
   </StackPanel>

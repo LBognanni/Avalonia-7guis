@@ -21,8 +21,8 @@ namespace FlightBooker
 
         public ReservationViewModel()
         {
-            Date1 = DateTime.Today;
-            Date2 = DateTime.Today.AddDays(-1);
+            _date1 = DateTime.Today;
+            _date2 = DateTime.Today.AddDays(-1);
             ReservationTypes = new ObservableCollection<KeyValuePair<ReservationType, string>>(new Dictionary<ReservationType, string>
             {
                 { ReservationType.OneWay, "one-way flight" },
@@ -32,27 +32,29 @@ namespace FlightBooker
             SelectedReservationType = ReservationTypes.First();
         }
 
-        public DateTime Date1
+        public string Date1
         {
-            get => _date1;
+            get => _date1.ToShortDateString();
             set
             {
-                if (_date2 != value)
+                var newDate = DateTime.Parse(value);
+                if (_date1 != newDate)
                 {
-                    _date1 = value;
+                    _date1 = newDate;
                     OnAllPropertiesChanged();
                 }
             }
         }
 
-        public DateTime Date2
+        public string Date2
         {
-            get => _date2;
+            get => _date2.ToShortDateString();
             set
             {
-                if (_date2 != value)
+                var newDate = DateTime.Parse(value);
+                if (_date2 != newDate)
                 {
-                    _date2 = value;
+                    _date2 = newDate;
                     OnAllPropertiesChanged();
                 }
             }
@@ -84,7 +86,7 @@ namespace FlightBooker
             {
                 if (Date2Enabled)
                 {
-                    return Date2 > Date1;
+                    return _date2 > _date1;
                 }
                 return true;
             }
