@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter", "Counter\Counter.csproj", "{DB6C7537-D68D-4685-95DF-433B16888657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Counter", "Counter\Counter.csproj", "{DB6C7537-D68D-4685-95DF-433B16888657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter", "TemperatureConverter\TemperatureConverter.csproj", "{7A32F50C-C6D8-40BF-836B-04D93C152258}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureConverter", "TemperatureConverter\TemperatureConverter.csproj", "{7A32F50C-C6D8-40BF-836B-04D93C152258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightBooker", "FlightBooker\FlightBooker.csproj", "{6C0CA274-AA00-4375-86E7-3D54205BE818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightBooker", "FlightBooker\FlightBooker.csproj", "{6C0CA274-AA00-4375-86E7-3D54205BE818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{00618AB2-0794-45C6-8D5B-6A69D0D414A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timer", "Timer\Timer.csproj", "{00618AB2-0794-45C6-8D5B-6A69D0D414A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD", "CRUD\CRUD.csproj", "{2DC0B998-131F-4B7D-94AC-4099059D8A12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD", "CRUD\CRUD.csproj", "{2DC0B998-131F-4B7D-94AC-4099059D8A12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleDrawer", "CircleDrawer\CircleDrawer.csproj", "{9925B8E0-60B7-4586-B13E-864650FC9D80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2DC0B998-131F-4B7D-94AC-4099059D8A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DC0B998-131F-4B7D-94AC-4099059D8A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DC0B998-131F-4B7D-94AC-4099059D8A12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
