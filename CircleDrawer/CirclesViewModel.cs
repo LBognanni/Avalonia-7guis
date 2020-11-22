@@ -35,15 +35,17 @@ namespace CircleDrawer
             OnPropertyChanged(nameof(Circles));
         }
 
-        public void SaveUndo()
+        public void SaveUndo(bool clearRedo = true)
         {
-            _redoStack.Clear();
-            OnPropertyChanged(nameof(CanRedo));
+            if (clearRedo)
+            {
+                _redoStack.Clear();
+                OnPropertyChanged(nameof(CanRedo));
+            }
 
             _undoStack.Push(Circles.Select(c => c.Copy()).ToArray());
             OnPropertyChanged(nameof(CanUndo));
         }
-
 
         public void Undo()
         {
@@ -56,20 +58,22 @@ namespace CircleDrawer
 
         public void Redo()
         {
+            SaveUndo(false);
             Circles = new ObservableCollection<Circle>(_redoStack.Pop().ToList());
             OnPropertyChanged(nameof(CanRedo)); ;
             OnPropertyChanged(nameof(Circles));
         }
 
-        public void HandleMouse(int x, int y)
+        public Circle? HandleMouse(int x, int y)
         {
-            bool hasSelected = false;
+            Circle? selectedCircle = null;
+
             foreach (var circle in Circles)
             {
                 if (circle.HitTest(x, y))
                 {
                     circle.Selected = true;
-                    hasSelected = true;
+                    selectedCircle = circle;
                 }
                 else
                 {
@@ -80,12 +84,13 @@ namespace CircleDrawer
                 }
             }
 
-            if(hasSelected)
+            if(selectedCircle != null)
             {
-                return;
+                return selectedCircle;
             }
 
             Add(x, y);
+            return null;
         }
 
         public bool CanUndo => _undoStack.Any();

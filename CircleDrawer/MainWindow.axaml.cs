@@ -18,7 +18,22 @@ namespace CircleDrawer
         private void MainWindow_PointerPressed(object sender, PointerPressedEventArgs e)
         {
             var pos = e.GetPosition((Control)sender);
-            _model.HandleMouse((int)pos.X, (int)pos.Y);
+            var selected = _model.HandleMouse((int)pos.X, (int)pos.Y);
+            if(selected!=null)
+            {
+                var oldRadius = selected.Radius;
+
+                var detailsWindow = new CircleDetailsWindow();
+                detailsWindow.DataContext = selected;
+
+                int x = this.Position.X + (int)(this.Width / 2) - (int)(detailsWindow.Width / 2);
+                int y = this.Position.Y + (int)this.Height - (int)detailsWindow.Height;
+
+                detailsWindow.Position = new PixelPoint(x, y);
+
+                _model.SaveUndo();
+                detailsWindow.ShowDialog(this);
+            }
         }
 
         private void InitializeComponent()

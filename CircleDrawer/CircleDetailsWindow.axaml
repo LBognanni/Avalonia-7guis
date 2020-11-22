@@ -1,0 +1,32 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        d:DesignWidth="400"
+        d:DesignHeight="60"
+        Width="400"
+        Height="60"
+        Padding="10"
+        Title=""
+        ShowInTaskbar="False"
+        CanResize="False"
+        x:Class="CircleDrawer.CircleDetailsWindow"
+        >
+
+  <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+      <TextBlock>Adjust diameter of circle at (</TextBlock>
+      <TextBlock Text="{Binding X}"></TextBlock>
+      <TextBlock>,</TextBlock>
+      <TextBlock Text="{Binding Y}"></TextBlock>
+      <TextBlock>)</TextBlock>
+    </StackPanel>
+
+    <Slider Minimum="2" Maximum="100" Value="{Binding Radius}"></Slider>
+    
+  </StackPanel>
+  
+  
+</Window>
