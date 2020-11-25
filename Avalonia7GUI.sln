@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timer", "Timer\Timer.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD", "CRUD\CRUD.csproj", "{2DC0B998-131F-4B7D-94AC-4099059D8A12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleDrawer", "CircleDrawer\CircleDrawer.csproj", "{9925B8E0-60B7-4586-B13E-864650FC9D80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleDrawer", "CircleDrawer\CircleDrawer.csproj", "{9925B8E0-60B7-4586-B13E-864650FC9D80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cells", "Cells\Cells.csproj", "{59359F29-642D-4654-88B8-972142145864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cells.Tests", "Cells.Tests\Cells.Tests.csproj", "{3877160D-910A-4D56-A2D8-FB3791A38899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9925B8E0-60B7-4586-B13E-864650FC9D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59359F29-642D-4654-88B8-972142145864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59359F29-642D-4654-88B8-972142145864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59359F29-642D-4654-88B8-972142145864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59359F29-642D-4654-88B8-972142145864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3877160D-910A-4D56-A2D8-FB3791A38899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3877160D-910A-4D56-A2D8-FB3791A38899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3877160D-910A-4D56-A2D8-FB3791A38899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3877160D-910A-4D56-A2D8-FB3791A38899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
