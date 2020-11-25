@@ -94,7 +94,7 @@ namespace CircleDrawer
 
         public Circle Copy() => new Circle { Width = Width, Height = Height, Top = Top, Left = Left };
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "") =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

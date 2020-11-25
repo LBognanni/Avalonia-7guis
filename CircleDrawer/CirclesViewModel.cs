@@ -96,7 +96,7 @@ namespace CircleDrawer
         public bool CanUndo => _undoStack.Any();
         public bool CanRedo => _redoStack.Any();
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "") =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
