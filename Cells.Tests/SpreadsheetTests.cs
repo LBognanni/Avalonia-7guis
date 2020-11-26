@@ -51,5 +51,34 @@ namespace Cells.Tests
 
             spreadsheet.GetCellValue("A", 2).Should().Be("100");
         }
+
+        [Test]
+        public void SpreadSheet_HandlesMultipleOperations()
+        {
+            var spreadsheet = new SpreadSheet();
+
+            spreadsheet.UpdateCell("A", 1, "40");
+            spreadsheet.UpdateCell("B", 1, "60");
+            spreadsheet.UpdateCell("A", 2, "=A1+B1-20");
+
+            spreadsheet.GetCellValue("A", 2).Should().Be("80");
+        }
+
+        [TestCase("=A1+(B1*2)", "160")]
+        [TestCase("=((B1+B2)*2)-A1", "146")]
+        [TestCase("=((B1+B2)-(A1+B2))-20", "0")]
+        [TestCase("=10+(20)+(30-10)+(30-(10+20))-4", "46")]
+        [TestCase("=10+(20+30-10)+(30-(10+20))-4", "46")]
+        public void SpreadSheet_HandlesParens(string formula, string expected)
+        {
+            var spreadsheet = new SpreadSheet();
+
+            spreadsheet.UpdateCell("A", 1, "40");
+            spreadsheet.UpdateCell("B", 1, "60");
+            spreadsheet.UpdateCell("B", 2, "33");
+            spreadsheet.UpdateCell("A", 2, formula);
+
+            spreadsheet.GetCellValue("A", 2).Should().Be(expected);
+        }
     }
 }
